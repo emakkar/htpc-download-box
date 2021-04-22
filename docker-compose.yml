@@ -3,6 +3,8 @@ services:
     sonarr:
         container_name: sonarr
         image: linuxserver/sonarr:latest
+        ports:
+            - 8989:8989
         restart: unless-stopped
         # network_mode: host
         environment:
