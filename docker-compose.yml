@@ -55,17 +55,17 @@ services:
 #       - ${ROOT}/downloads:/downloads # download folder
 #       - ${ROOT}/config/nzbget:/config # config files
 
-#   sonarr:
-#     container_name: sonarr
-#     image: linuxserver/sonarr:latest
-#     restart: unless-stopped
+  sonarr:
+    container_name: sonarr
+    image: linuxserver/sonarr:latest
+    restart: unless-stopped
 #     network_mode: host
-#     environment:
-#       - PUID=${PUID} # default user id, defined in .env
-#       - PGID=${PGID} # default group id, defined in .env
-#       - TZ=${TZ} # timezone, defined in .env
-#     volumes:
-#       - /etc/localtime:/etc/localtime:ro
+    environment:
+      - PUID=${PUID} # default user id, defined in .env
+      - PGID=${PGID} # default group id, defined in .env
+      - TZ=${TZ} # timezone, defined in .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
 #       - ${ROOT}/config/sonarr:/config # config files
 #       - ${ROOT}/complete/tv:/tv # tv shows folder
 #       - ${ROOT}/downloads:/downloads # download folder
